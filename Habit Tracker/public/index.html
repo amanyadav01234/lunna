@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Habit Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Habit Tracker</h1>
+            <p>Build better habits, one day at a time.</p>
+        </header>
+
+        <main>
+            <section class="add-habit-section">
+                <h2>Add New Habit</h2>
+                <form id="add-habit-form">
+                    <input type="text" id="habit-name" placeholder="Enter habit name (e.g., Drink Water)" required>
+                    <button type="submit">Add Habit</button>
+                </form>
+                
+                <div class="ai-suggestion">
+                    <button id="ai-suggest-btn" type="button">✨ Get AI Suggestions</button>
+                    <div id="ai-modal" class="modal hidden">
+                        <div class="modal-content">
+                            <span class="close-modal">&times;</span>
+                            <h3>AI Habit Suggestions</h3>
+                            <input type="text" id="goal-input" placeholder="What is your goal? (e.g., Better Sleep)">
+                            <button id="get-suggestions-btn">Generate</button>
+                            <ul id="suggestions-list"></ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="habit-list-section">
+                <h2>Your Habits</h2>
+                <ul id="habit-list">
+                    <!-- Habits will be injected here -->
+                </ul>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
